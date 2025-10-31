@@ -1,11 +1,9 @@
 package application;
 
 import entities.Product;
-import util.PriceUpdate;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class Program {
     public static void main(String[] args) {
@@ -17,10 +15,8 @@ public class Program {
 
         //desse jeito é bom porque a variável pode vir de fora
         //inclusive uma variável lida por um usuário
-        Consumer<Product> cons = p -> p.setPrice(p.getPrice() * 1.1);
-
-        //referência pro metodo que fizemos dentro de Product
-        list.forEach(cons);
+        //expressão lambda inline para Consumer
+        list.forEach(p -> p.setPrice(p.getPrice() * 1.1));
 
         //to usando um reference method para o println
         list.forEach(System.out::println);
