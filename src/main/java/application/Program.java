@@ -15,7 +15,7 @@ public class Program {
         list.add(new Product("HD Case", 80.90));
 
         //referência pro metodo que fizemos dentro de Product
-        list.forEach(Product::staticPriceUpdate);
+        list.forEach(Product::nonstaticPriceUpdate);
 
         //to usando um reference method para o println
         list.forEach(System.out::println);

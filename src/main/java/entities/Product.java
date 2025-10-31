@@ -31,6 +31,11 @@ public class Product {
         p.setPrice(p.getPrice() * 1.1);
     }
 
+    //não estático, mexe com o objeto da própria classe sem parâmetro
+    public void nonstaticPriceUpdate(){
+        setPrice(getPrice() * 1.1);
+    }
+
     @Override
     public String toString() {
         return "Product "
