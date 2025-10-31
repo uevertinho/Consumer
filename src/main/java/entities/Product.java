@@ -25,6 +25,12 @@ public class Product {
         this.price = price;
     }
 
+    //como é um estático, nao mexe com o próprio objeto
+    //ele mexe com o que recebe como parâmetro
+    public static void staticPriceUpdate(Product p){
+        p.setPrice(p.getPrice() * 1.1);
+    }
+
     @Override
     public String toString() {
         return "Product "
